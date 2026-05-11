@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AREZZO BARUERI - TESTE · Bônus</title>
+    <link rel="stylesheet" href="css/page.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1 class="page-header__title">AREZZO BARUERI - TESTE</h1>
+    </header>
+
+    <main class="page-main layout-stack">
+      <section class="layout-stack" style="gap: 0">
+        <h2>Relatórios</h2>
+        <div class="carddash-row">
+          <article class="carddash">
+            <p class="carddash__title">Total disponível <strong>hoje</strong></p>
+            <div class="carddash__amount">
+              <span class="carddash__currency">R$</span>
+              <span class="carddash__value">0,00</span>
+            </div>
+          </article>
+          <article class="carddash">
+            <p class="carddash__title">Bônus a <strong>receber</strong></p>
+            <div class="carddash__amount">
+              <span class="carddash__currency">R$</span>
+              <span class="carddash__value">20,00</span>
+            </div>
+          </article>
+          <article class="carddash">
+            <p class="carddash__title">Bônus <strong>vencido</strong></p>
+            <div class="carddash__amount">
+              <span class="carddash__value">1</span>
+            </div>
+          </article>
+          <article class="carddash">
+            <p class="carddash__title">Bônus a <strong>vencer</strong></p>
+            <div class="carddash__amount">
+              <span class="carddash__value">1</span>
+            </div>
+          </article>
+          <article class="carddash">
+            <p class="carddash__title">Bônus <strong>gerado</strong></p>
+            <div class="carddash__amount">
+              <span class="carddash__value">1</span>
+            </div>
+          </article>
+          <article class="carddash">
+            <p class="carddash__title">Bônus <strong>resgatado</strong></p>
+            <div class="carddash__amount">
+              <span class="carddash__value">1</span>
+            </div>
+          </article>
+          <article class="carddash">
+            <p class="carddash__title">Bônus <strong>cancelado</strong></p>
+            <div class="carddash__amount">
+              <span class="carddash__value">1</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="layout-stack" style="gap: 0">
+        <h2>Gerenciar bônus</h2>
+        <div class="toolbar-row">
+          <input class="input" type="search" name="q" placeholder="Busca" autocomplete="off" />
+          <button type="button" class="btn primary btn primary--dark-text">Lançar bônus</button>
+        </div>
+
+        <div class="tabs-row">
+          <button type="button" class="tabs tabs--on" aria-pressed="true">Todos</button>
+          <button type="button" class="tabs" aria-pressed="false">Disponível</button>
+          <button type="button" class="tabs" aria-pressed="false">A receber</button>
+          <button type="button" class="tabs" aria-pressed="false">Resgatado</button>
+          <button type="button" class="tabs" aria-pressed="false">Vencido</button>
+          <button type="button" class="tabs" aria-pressed="false">Cancelado</button>
+        </div>
+
+        <div style="overflow-x: auto">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="tableheader" scope="col">
+                  <div class="tableheader__cell">
+                    <span class="tableheader__label">Loja</span>
+                    <button type="button" class="tableheader__sort" aria-label="Ordenar por loja">
+                      <img src="assets/icons/table-sort.svg" width="10" height="26" alt="" />
+                    </button>
+                  </div>
+                </th>
+                <th class="tableheader" scope="col">
+                  <div class="tableheader__cell">
+                    <span class="tableheader__label">Valor da compra</span>
+                    <button type="button" class="tableheader__sort" aria-label="Ordenar por valor da compra">
+                      <img src="assets/icons/table-sort.svg" width="10" height="26" alt="" />
+                    </button>
+                  </div>
+                </th>
+                <th class="tableheader" scope="col">
+                  <div class="tableheader__cell">
+                    <span class="tableheader__label">Bônus gerado</span>
+                    <button type="button" class="tableheader__sort" aria-label="Ordenar por bônus gerado">
+                      <img src="assets/icons/table-sort.svg" width="10" height="26" alt="" />
+                    </button>
+                  </div>
+                </th>
+                <th class="tableheader" scope="col">
+                  <div class="tableheader__cell">
+                    <span class="tableheader__label">Validade do bônus</span>
+                    <button type="button" class="tableheader__sort" aria-label="Ordenar por validade">
+                      <img src="assets/icons/table-sort.svg" width="10" height="26" alt="" />
+                    </button>
+                  </div>
+                </th>
+                <th class="tableheader" scope="col">
+                  <div class="tableheader__cell">
+                    <span class="tableheader__label">Origem</span>
+                    <button type="button" class="tableheader__sort" aria-label="Ordenar por origem">
+                      <img src="assets/icons/table-sort.svg" width="10" height="26" alt="" />
+                    </button>
+                  </div>
+                </th>
+                <th class="tableheader" scope="col">
+                  <div class="tableheader__cell">
+                    <span class="tableheader__label">Status</span>
+                    <button type="button" class="tableheader__sort" aria-label="Ordenar por status">
+                      <img src="assets/icons/table-sort.svg" width="10" height="26" alt="" />
+                    </button>
+                  </div>
+                </th>
+                <th class="tableheader" scope="col">
+                  <div class="tableheader__cell">
+                    <span class="tableheader__label">Ações</span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">AREZZO BARUERI - TESTE</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 10,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 20,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <div class="tablecell__stack">
+                      <span class="tablecell__value">14-05-2026</span>
+                      <span class="tablecell__value">até 18-12-2025</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">&nbsp;</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">A receber</span>
+                  </div>
+                </td>
+                <td class="tablecell tablecell--action">
+                  <div class="tablecell__cell">
+                    <button type="button" class="tableaction-btn tableaction-btn--primary">Cancelar</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">AREZZO BARUERI - TESTE</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 10,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 20,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <div class="tablecell__stack">
+                      <span class="tablecell__value">14-05-2026</span>
+                      <span class="tablecell__value">até 18-12-2025</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">&nbsp;</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">A receber</span>
+                  </div>
+                </td>
+                <td class="tablecell tablecell--action">
+                  <div class="tablecell__cell">
+                    <button type="button" class="tableaction-btn tableaction-btn--primary">Cancelar</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">AREZZO BARUERI - TESTE</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 10,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 20,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <div class="tablecell__stack">
+                      <span class="tablecell__value">14-05-2026</span>
+                      <span class="tablecell__value">até 18-12-2025</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">&nbsp;</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">A receber</span>
+                  </div>
+                </td>
+                <td class="tablecell tablecell--action">
+                  <div class="tablecell__cell">
+                    <button type="button" class="tableaction-btn tableaction-btn--primary">Cancelar</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">AREZZO BARUERI - TESTE</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 10,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 20,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <div class="tablecell__stack">
+                      <span class="tablecell__value">14-05-2026</span>
+                      <span class="tablecell__value">até 18-12-2025</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">&nbsp;</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">A receber</span>
+                  </div>
+                </td>
+                <td class="tablecell tablecell--action">
+                  <div class="tablecell__cell">
+                    <button type="button" class="tableaction-btn tableaction-btn--primary">Cancelar</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">AREZZO BARUERI - TESTE</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 10,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 20,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <div class="tablecell__stack">
+                      <span class="tablecell__value">14-05-2026</span>
+                      <span class="tablecell__value">até 18-12-2025</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">&nbsp;</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">A receber</span>
+                  </div>
+                </td>
+                <td class="tablecell tablecell--action">
+                  <div class="tablecell__cell">
+                    <button type="button" class="tableaction-btn tableaction-btn--primary">Cancelar</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">AREZZO BARUERI - TESTE</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 10,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">R$ 20,00</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <div class="tablecell__stack">
+                      <span class="tablecell__value">14-05-2026</span>
+                      <span class="tablecell__value">até 18-12-2025</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">&nbsp;</span>
+                  </div>
+                </td>
+                <td class="tablecell">
+                  <div class="tablecell__cell">
+                    <span class="tablecell__value">A receber</span>
+                  </div>
+                </td>
+                <td class="tablecell tablecell--action">
+                  <div class="tablecell__cell">
+                    <button type="button" class="tableaction-btn tableaction-btn--primary">Cancelar</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
