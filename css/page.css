@@ -1,0 +1,398 @@
+/* Montserrat — Regular / Medium / SemiBold / Bold; Raleway — Bold (header) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@700&display=swap");
+
+/**
+ * Layout — espaço entre grandes blocos da interface
+ */
+:root {
+  --layout-gap-section: 48px;
+  --page-bg: #171717;
+  --page-main-margin-x: 200px;
+  --page-main-padding-y: 24px;
+}
+
+/* Shell da página (fundo escuro + tipografia base) */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  font-family: "Montserrat", sans-serif;
+}
+
+.page-main {
+  box-sizing: border-box;
+  margin-left: var(--page-main-margin-x);
+  margin-right: var(--page-main-margin-x);
+  padding: var(--page-main-padding-y) 0 48px;
+}
+
+/* Linha de .carddash (relatórios) */
+.carddash-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.carddash-row > .carddash {
+  flex: 1 1 140px;
+  min-width: 140px;
+}
+
+/* Busca + botão primário */
+.toolbar-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.toolbar-row .input {
+  flex: 1;
+}
+
+.toolbar-row .input--width-auto {
+  flex: 0 1 auto;
+}
+
+.toolbar-row .btn.primary {
+  flex-shrink: 0;
+}
+
+/* Filtros em linha */
+.tabs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+/* Tabela de dados */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Bloco empilhado dentro da célula (ex.: duas datas) */
+.tablecell__stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+/**
+ * Empilha containers principais com 48px entre si (use no wrapper da página / área de conteúdo).
+ */
+.layout-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-gap-section);
+}
+
+/**
+ * Barra superior da página — 50px, #000, drop shadow (Y 3, blur 7, #000 12%);
+ * texto à esquerda, padding 32px, centrado na vertical; Raleway Bold 14/20, letter-spacing 1.2px, #B9A078.
+ */
+.page-header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+  padding: 0 32px;
+  background-color: #000000;
+  box-shadow: 0 3px 7px 0 rgb(0 0 0 / 12%);
+  color: #b9a078;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.2px;
+  text-align: left;
+}
+
+.page-header__title {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+/**
+ * H2 da página — specs do painel (24 / 32, SemiBold, #FAFAFA, alinhamento à esquerda)
+ * margin inferior: 32px
+ */
+h2 {
+  margin: 0 0 32px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
+  color: #fafafa;
+  text-align: left;
+}
+
+/**
+ * .carddash — container (padding 16px, gap vertical 8px, sem borda / radius)
+ */
+.carddash {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 0;
+  border-radius: 0;
+  background-color: #343434;
+  color: #fafafa;
+}
+
+/**
+ * Título: Regular 12px; trechos com ênfase → SemiBold 12px (use <strong> ou .carddash__title--emphasis)
+ */
+.carddash__title {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.carddash__title strong,
+.carddash__title .carddash__title--emphasis {
+  font-weight: 600;
+}
+
+/**
+ * Linha do valor: moeda (Regular 12px) | gap 4px | número (Medium 20px)
+ */
+.carddash__amount {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.carddash__currency {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fafafa;
+}
+
+.carddash__value {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fafafa;
+}
+
+/**
+ * Input padrão — altura 48px, largura no fluxo (auto / preenche o pai com width: 100%),
+ * fundo #2D2D2D, sem radius; texto e placeholder: Regular 14px / line-height 24px, #FAFAFA
+ */
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: 48px;
+  margin: 0;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 0;
+  background-color: #2d2d2d;
+  color: #fafafa;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.input::placeholder {
+  color: #fafafa;
+  opacity: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.input--width-auto {
+  width: auto;
+}
+
+/**
+ * Botão primário — use <button class="btn primary"> ou <a class="btn primary">
+ */
+.btn.primary {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 12px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #b9a078;
+  color: #fafafa;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn.primary:hover {
+  background-color: #95784a;
+}
+
+/* Texto escuro sobre fundo dourado (ex.: “Lançar bônus” no mock) */
+.btn.primary.primary--dark-text,
+.btn.primary.primary--dark-text:hover {
+  color: #111111;
+}
+
+/**
+ * .tabs — estado OFF por defeito; acrescente .tabs--on para o estado ON
+ */
+.tabs {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 8px 32px;
+  border: 1px solid #b9a078;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #b9a078;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tabs--on {
+  background-color: #b9a078;
+  border-color: #b9a078;
+  color: #111111;
+}
+
+/**
+ * Cabeçalho (.tableheader) e célula de coluna (.tablecell) — altura 70px, fundo #383838,
+ * stroke interior 1px #FFF na base, padding horizontal 16px, conteúdo à esquerda e centrado na vertical.
+ * Cabeçalho: label Bold 12/17 + ordenação opcional (.tableheader__sort + assets/icons/table-sort.svg).
+ * Célula: texto Regular 12/19 em #FFF, sem ordenação.
+ */
+.tableheader,
+.tablecell {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 0 16px;
+  background-color: #383838;
+  text-align: left;
+  vertical-align: middle;
+  box-shadow: inset 0 -1px 0 0 #ffffff;
+}
+
+.tableheader__cell,
+.tablecell__cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+}
+
+.tableheader__cell {
+  gap: 8px;
+}
+
+.tableheader__label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.tableheader__sort {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.tableheader__sort img,
+.tableheader__sort svg {
+  display: block;
+  width: 10px;
+  height: 26px;
+}
+
+.tablecell__value {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+/**
+ * Célula de ações — mesmo chrome que .tablecell; conteúdo alinhado à direita com gap entre botões.
+ * Botões: .tableaction-btn--primary (outline) | .tableaction-btn--secondary (preenchido, estilo do .btn.primary a 32px).
+ */
+.tablecell--action .tablecell__cell {
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.tableaction-btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  margin: 0;
+  padding: 0 12px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Primário: sem fill, stroke 1px #B9A078 (dentro dos 32px — border + border-box) */
+.tableaction-btn--primary {
+  border: 1px solid #b9a078;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+/* Secundário: mesmo look do botão primário global (fundo dourado), altura 32px */
+.tableaction-btn--secondary {
+  border: 1px solid #b9a078;
+  background-color: #b9a078;
+  color: #ffffff;
+}
+
+.tableaction-btn--secondary:hover {
+  background-color: #95784a;
+  border-color: #95784a;
+}

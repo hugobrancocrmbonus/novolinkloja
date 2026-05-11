@@ -1,0 +1,26 @@
+<svg width="10" height="26" viewBox="0 0 10 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#table-sort-clip0)">
+    <g clip-path="url(#table-sort-clip1)">
+      <path d="M9.70125 7.71027C10.1288 7.24234 10.0885 6.51635 9.63672 6.0727L5.82128 2.24919C5.59541 2.02333 5.29696 1.9104 4.9985 1.9104C4.70004 1.9104 4.40166 2.02333 4.17572 2.24919L0.360358 6.06463C-0.0832977 6.50829 -0.131697 7.24234 0.295826 7.70212C0.747548 8.19426 1.51378 8.21031 1.98172 7.74246L4.42586 5.29832C4.74037 4.98372 5.24864 4.98372 5.56323 5.29832L8.00737 7.74246C8.48329 8.21838 9.24961 8.20233 9.70125 7.71027Z" fill="white"/>
+    </g>
+  </g>
+  <g opacity="0.3" clip-path="url(#table-sort-clip2)">
+    <g clip-path="url(#table-sort-clip3)">
+      <path d="M0.298753 18.2897C-0.12885 18.7577 -0.0885181 19.4836 0.363284 19.9273L4.17872 23.7508C4.40459 23.9767 4.70304 24.0896 5.0015 24.0896C5.29996 24.0896 5.59834 23.9767 5.82428 23.7508L9.63964 19.9354C10.0833 19.4917 10.1317 18.7577 9.70417 18.2979C9.25245 17.8057 8.48622 17.7897 8.01828 18.2575L5.57414 20.7017C5.25963 21.0163 4.75136 21.0163 4.43677 20.7017L1.99263 18.2575C1.51671 17.7816 0.750395 17.7977 0.298753 18.2897Z" fill="white"/>
+    </g>
+  </g>
+  <defs>
+    <clipPath id="table-sort-clip0">
+      <rect width="10" height="10" fill="white"/>
+    </clipPath>
+    <clipPath id="table-sort-clip1">
+      <rect width="10" height="10" fill="white"/>
+    </clipPath>
+    <clipPath id="table-sort-clip2">
+      <rect width="10" height="10" fill="white" transform="matrix(-1 0 0 -1 10 26)"/>
+    </clipPath>
+    <clipPath id="table-sort-clip3">
+      <rect width="10" height="10" fill="white" transform="matrix(-1 0 0 -1 10 26)"/>
+    </clipPath>
+  </defs>
+</svg>
